@@ -46,11 +46,54 @@ npm run dev
 
 ```
 
+## Ajout 2 eme page
 
-      {/* Affiche la liste des usernames */}
-      <ul>
-        {userName.map((user, index) => (
-          <li key={index}>{user}</li>
-        ))}
-      </ul>
+
+### Installer :
+
+```
+npm install react-router-dom
+```
+
+### Crée la 2e page : 
+
+```
+function About() {
+  return <h1>Page À propos</h1>;
+}
+
+export default About;
+
+```
+
+### Définir le routeur :
+
+```
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import About from "./About";
+
+function Home() {
+  return <h1>Page Accueil</h1>;
+}
+
+function App() {
+  return (
+    <BrowserRouter>
+      <nav>
+        <Link to="/">Accueil</Link> | 
+        <Link to="/about">À propos</Link>
+      </nav>
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
+    </BrowserRouter>
+  );
+}
+
+export default App;
+
+```
+
       
