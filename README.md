@@ -1,6 +1,5 @@
 # POMODORO_project
-Un projet personnel simple
-Veux juste essayer, un pomodoro simple
+Un projet personnel simple, j'essaie de développer un pomodoro simple
 
 # BACKEND
 
